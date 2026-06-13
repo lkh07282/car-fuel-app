@@ -1,3 +1,5 @@
+// 로딩, 에러, 결과 없음 메시지를 출력하는 컴포넌트
+
 function StatusMessage({ loading, error, cars }) {
   if (loading) {
     return <p className="status-text">불러오는 중...</p>;

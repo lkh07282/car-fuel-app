@@ -1,9 +1,11 @@
+/* 전체 페이지 기본 설정 */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* body 기본 스타일 */
 body {
   background-color: #f5f5f5;
   color: #111111;
@@ -11,10 +13,12 @@ body {
   line-height: 1.5;
 }
 
+/* React root 영역 */
 #root {
   width: 100%;
 }
 
+/* 전체 내용을 감싸는 메인 박스 */
 .container {
   max-width: 1200px;
   margin: 40px auto;
@@ -24,6 +28,7 @@ body {
   border-radius: 16px;
 }
 
+/* 메인 제목 스타일 */
 h1 {
   text-align: center;
   font-size: 32px;
@@ -31,17 +36,20 @@ h1 {
   color: #111111;
 }
 
+/* 소제목 스타일 */
 h2,
 h3 {
   margin-bottom: 16px;
   color: #111111;
 }
 
+/* 기본 문단 스타일 */
 p {
   margin-bottom: 12px;
   color: #333333;
 }
 
+/* 공통 버튼 스타일 */
 button {
   padding: 10px 16px;
   border: 1px solid #222222;
@@ -52,11 +60,13 @@ button {
   transition: 0.2s;
 }
 
+/* 버튼 hover 스타일 */
 button:hover {
   background-color: #111111;
   color: #ffffff;
 }
 
+/* 비활성화 버튼 스타일 */
 button:disabled {
   background-color: #e5e5e5;
   color: #999999;
@@ -64,6 +74,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
+/* 공통 input 스타일 */
 input {
   width: 100%;
   padding: 12px 14px;
@@ -74,19 +85,22 @@ input {
   font-size: 14px;
 }
 
+/* input 포커스 스타일 */
 input:focus {
   outline: none;
   border-color: #111111;
 }
 
+/* 주요 섹션 간 여백 */
 .brand-section,
 .search-section,
 .page-section,
-.status-section,
-.table-section {
+.table-section,
+.compare-section {
   margin-bottom: 24px;
 }
 
+/* 브랜드 버튼 정렬 */
 .brand-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -94,10 +108,12 @@ input:focus {
   margin-bottom: 20px;
 }
 
+/* 브랜드 버튼 최소 너비 */
 .brand-buttons button {
   min-width: 110px;
 }
 
+/* 직접 입력과 검색 폼 레이아웃 */
 .custom-brand-box,
 .search-form {
   display: grid;
@@ -106,11 +122,13 @@ input:focus {
   margin-top: 12px;
 }
 
+/* 폼 안 버튼 너비 */
 .custom-brand-box button,
 .search-form button {
   width: 100%;
 }
 
+/* 선택 정보 박스 */
 .selected-brand-box {
   display: flex;
   justify-content: space-between;
@@ -123,6 +141,15 @@ input:focus {
   margin-bottom: 20px;
 }
 
+/* 선택 정보 박스 안 버튼 묶음 */
+.selected-brand-actions,
+.selected-brand-box > div {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* 페이지 버튼 영역 */
 .page-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -130,20 +157,24 @@ input:focus {
   align-items: center;
 }
 
+/* 페이지 정보 텍스트 */
 .page-info {
   margin-top: 10px;
   font-size: 14px;
   color: #555555;
 }
 
+/* 로딩/오류/결과없음 텍스트 박스 */
 .status-text {
   padding: 14px 16px;
   border: 1px solid #dddddd;
   background-color: #fafafa;
   border-radius: 10px;
   color: #333333;
+  margin-bottom: 16px;
 }
 
+/* 표 전체를 감싸는 영역 */
 .table-wrapper {
   overflow-x: auto;
   border: 1px solid #dddddd;
@@ -151,16 +182,19 @@ input:focus {
   background-color: #ffffff;
 }
 
+/* 기본 표 스타일 */
 table {
   width: 100%;
   border-collapse: collapse;
   min-width: 900px;
 }
 
+/* 표 헤더 배경색 */
 thead {
   background-color: #f0f0f0;
 }
 
+/* 셀 공통 스타일 */
 th,
 td {
   padding: 14px 12px;
@@ -170,15 +204,18 @@ td {
   color: #222222;
 }
 
+/* 헤더 글자 굵기 */
 th {
   font-weight: 700;
   white-space: nowrap;
 }
 
+/* 행 hover 효과 */
 tbody tr:hover {
   background-color: #fafafa;
 }
 
+/* 상세보기 안쪽 표 박스 */
 .detail-table {
   margin-top: 12px;
   border: 1px solid #dddddd;
@@ -186,21 +223,78 @@ tbody tr:hover {
   overflow: hidden;
 }
 
+/* 상세 테이블 최소 너비 */
 .detail-table table {
   min-width: 800px;
 }
 
+/* 상세보기 버튼 크기 */
 .detail-button {
   padding: 8px 12px;
   font-size: 13px;
 }
 
+/* 구분선 스타일 */
 .section-line {
   border: none;
   border-top: 1px solid #dddddd;
   margin: 20px 0;
 }
 
+/* 비교 섹션 상단 여백과 구분선 */
+.compare-section {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid #dddddd;
+}
+
+/* 비교 입력 2열 레이아웃 */
+.compare-input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* 비교 입력 박스 */
+.compare-input-box {
+  padding: 16px;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  background-color: #fafafa;
+}
+
+/* 비교 입력창 간격 */
+.compare-input-box input {
+  margin-top: 10px;
+}
+
+/* 비교 버튼 영역 */
+.compare-action {
+  margin-bottom: 20px;
+}
+
+/* 비교 결과 2열 레이아웃 */
+.compare-result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* 비교 카드 스타일 */
+.compare-card {
+  padding: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 14px;
+  background-color: #ffffff;
+}
+
+/* 비교 카드 내부 문단 간격 */
+.compare-card p {
+  margin-bottom: 10px;
+}
+
+/* 반응형 처리 */
 @media (max-width: 768px) {
   .container {
     margin: 20px;
@@ -214,5 +308,10 @@ tbody tr:hover {
   .selected-brand-box {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .compare-input-grid,
+  .compare-result-grid {
+    grid-template-columns: 1fr;
   }
 }

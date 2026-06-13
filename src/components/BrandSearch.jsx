@@ -1,13 +1,15 @@
+// 브랜드를 버튼 또는 직접 입력으로 선택하는 컴포넌트
+
 import { useState } from "react";
 
 function BrandSearch({ onSelectBrand }) {
-  // 화면에 보여줄 브랜드 목록
+  // 화면에 표시할 기본 브랜드 목록
   const brandList = ["현대", "기아", "벤츠", "BMW", "아우디", "포르쉐"];
 
-  // 직접 입력용 브랜드 상태
+  // 사용자가 직접 입력하는 브랜드 상태
   const [customBrand, setCustomBrand] = useState("");
 
-  // 직접 입력 브랜드 선택 함수
+  // 직접 입력한 브랜드를 선택하는 함수
   const handleCustomBrand = () => {
     if (!customBrand.trim()) {
       alert("브랜드를 입력해주세요.");
